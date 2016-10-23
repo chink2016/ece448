@@ -100,9 +100,9 @@ def get_possible_moves(node, agent):
                     move = Move(x, y, 0, 0, 0, 0, 0, 0)
                     if y+1 <= 7 and board[y+1][x] != 'a' and board[y+1][x] != 'b':
                         move.down = 1
-                    if y+1 <= 7 and x-1 >= 0 and board[y+1][x-1] != 'b':
+                    if y+1 <= 7 and x-1 >= 0 and board[y+1][x-1] != 'a':
                         move.downleft = 1
-                    if y+1 <= 7 and x+1 <= 7 and board[y+1][x+1] != 'b':
+                    if y+1 <= 7 and x+1 <= 7 and board[y+1][x+1] != 'a':
                         move.downright = 1
                 moves.append(move)
     return moves
